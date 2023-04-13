@@ -20,13 +20,6 @@ Além disso, o sistema incluirá interfaces de usuário, como um display OLED pa
 - Display Oled
 
 
-## Stack utilizada
-
-**Front-end:** Blade, Boostrap.
-
-**Back-end:** PHP, Laravel.
-
-
 ### Caso de uso 1
 #### Monitoramento de piscinas
 ![Caso de uso 1](https://images2.imgbox.com/ea/d4/VaBXzkLp_o.png)
