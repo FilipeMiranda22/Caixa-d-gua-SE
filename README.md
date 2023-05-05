@@ -23,22 +23,6 @@ Além disso, o sistema incluirá interfaces de usuário, como um display OLED pa
 - Sensor de temperatura ds18b20
 - Display Oled
 
-
-### Caso de uso 1
-#### Monitoramento de piscinas
-![Caso de uso 1](https://images2.imgbox.com/ea/d4/VaBXzkLp_o.png)
-
-
-### Caso de uso 2
-#### Controle de Temperatura de um Aquário
-![Caso de uso 2](https://images2.imgbox.com/55/84/dreuyN8D_o.png)
-
-
-### Caso de uso 3 
-#### Controle de irrigação em uma plantação 
-![Caso de uso 3](https://images2.imgbox.com/28/8f/b9JP8CTI_o.png)
-
-
 ### Equipe
 
 - [@Weslley Addson](https://github.com/wesquel/)
