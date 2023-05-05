@@ -1,6 +1,10 @@
 
 # Sistema embarcado para controler de reservatorios de armazenamento de água.
 
+## Introdução
+
+O projeto tem como objetivo desenvolver um sistema embarcado de controle de água, utilizando o microcontrolador ESP-32 e sensores para medir o nível, temperatura e qualidade da água. O sistema também incluirá interfaces de usuário, como um display OLED, e permitirá o controle da resistência e bomba de água. A automação e otimização do controle de processos que envolvem o uso da água são o foco desse projeto.
+
 
 ### Objetivo
 
