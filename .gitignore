@@ -1,0 +1,7 @@
+codigo_esp32/.devcontainer/
+codigo_esp32/.vscode/
+codigo_esp32/build/
+codigo_esp32/dependencies.lock
+codigo_esp32/sdkconfig
+codigo_esp32/sdkconfig.old
+codigo_esp32/sdkconfig.ci
