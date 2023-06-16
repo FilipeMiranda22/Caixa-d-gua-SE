@@ -12,5 +12,9 @@
     ],
     "idf.portWin": "COM1",
     "idf.pythonBinPathWin": "C:\\Users\\wesqu\\.espressif\\python_env\\idf4.4_py3.8_env\\Scripts\\python.exe",
-    "idf.toolsPathWin": "C:\\Users\\wesqu\\.espressif"
+    "idf.toolsPathWin": "C:\\Users\\wesqu\\.espressif",
+    "files.associations": {
+        "ssd1306.h": "c"
+    },
+    "idf.flashType": "UART"
 }

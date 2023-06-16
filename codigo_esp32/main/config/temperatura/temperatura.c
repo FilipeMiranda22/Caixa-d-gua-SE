@@ -4,12 +4,16 @@
 #include "driver/gpio.h"
 #include "ds18x20.h"
 #include "../oled/oled.h"
+#include "ssd1306.h"
 
 #define DS18B20_GPIO GPIO_NUM_3
 
+SSD1306_t dev;
+
 void init_temperatura(){
+    
     ds18x20_addr_t addrs[1];
-    SSD1306_t dev;
+    
     float temps[1];
     size_t sensor_count;
     char buffer[50];

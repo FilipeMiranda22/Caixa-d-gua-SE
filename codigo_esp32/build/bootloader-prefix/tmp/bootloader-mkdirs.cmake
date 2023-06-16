@@ -5,15 +5,15 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "C:/Users/wesqu/esp/esp-idf/components/bootloader/subproject"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/tmp"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src"
-  "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/tmp"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src"
+  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()

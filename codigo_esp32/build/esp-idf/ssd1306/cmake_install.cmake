@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wesqu/caixa-de-agua/components/ssd1306
+# Install script for directory: C:/Caixa-d-gua-SE/codigo_esp32/components/ssd1306
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/wesqu/caixa-de-agua/build/esp-idf/newlib/port/cmake_install.cmake")
+  include("C:/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/newlib/port/cmake_install.cmake")
 
 endif()
 

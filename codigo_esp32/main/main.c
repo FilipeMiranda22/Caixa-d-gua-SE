@@ -3,6 +3,10 @@
 #include "freertos/task.h"
 #include "config/temperatura/temperatura.h"
 #include "config/oled/oled.h"
+#include "ssd1306.h"
+#include "font8x8_basic.h"
+
+SSD1306_t dev;
 
 void app_main(void)
 {

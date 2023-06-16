@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wesqu/caixa-de-agua/main
+# Install script for directory: C:/Caixa-d-gua-SE/codigo_esp32/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

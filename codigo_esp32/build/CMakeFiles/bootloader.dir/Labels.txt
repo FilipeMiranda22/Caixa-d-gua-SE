@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/wesqu/caixa-de-agua/build/CMakeFiles/bootloader
-C:/Users/wesqu/caixa-de-agua/build/CMakeFiles/bootloader.rule
-C:/Users/wesqu/caixa-de-agua/build/CMakeFiles/bootloader-complete.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/wesqu/caixa-de-agua/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader
+C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader-complete.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
