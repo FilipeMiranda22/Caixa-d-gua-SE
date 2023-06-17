@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
-    "project_path":       "C:/Users/wesqu/esp/esp-idf/components/bootloader/subproject",
-    "build_dir":          "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader",
-    "config_file":        "C:/Caixa-d-gua-SE/codigo_esp32/sdkconfig",
+    "project_path":       "C:/Users/filip/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader",
+    "config_file":        "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",
@@ -13,9 +13,9 @@
     "monitor_baud" :      "115200",
     "monitor_toolprefix": "riscv32-esp-elf-",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "C:/Users/wesqu/esp/esp-idf/components/efuse/Kconfig;C:/Users/wesqu/esp/esp-idf/components/esp32c3/Kconfig;C:/Users/wesqu/esp/esp-idf/components/esp_common/Kconfig;C:/Users/wesqu/esp/esp-idf/components/esp_hw_support/Kconfig;C:/Users/wesqu/esp/esp-idf/components/esp_system/Kconfig;C:/Users/wesqu/esp/esp-idf/components/freertos/Kconfig;C:/Users/wesqu/esp/esp-idf/components/hal/Kconfig;C:/Users/wesqu/esp/esp-idf/components/log/Kconfig;C:/Users/wesqu/esp/esp-idf/components/newlib/Kconfig;C:/Users/wesqu/esp/esp-idf/components/spi_flash/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/wesqu/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/wesqu/esp/esp-idf/components/esp_rom/Kconfig.projbuild;C:/Users/wesqu/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/wesqu/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS" : "C:/Users/filip/esp/esp-idf/components/efuse/Kconfig;C:/Users/filip/esp/esp-idf/components/esp32c3/Kconfig;C:/Users/filip/esp/esp-idf/components/esp_common/Kconfig;C:/Users/filip/esp/esp-idf/components/esp_hw_support/Kconfig;C:/Users/filip/esp/esp-idf/components/esp_system/Kconfig;C:/Users/filip/esp/esp-idf/components/freertos/Kconfig;C:/Users/filip/esp/esp-idf/components/hal/Kconfig;C:/Users/filip/esp/esp-idf/components/log/Kconfig;C:/Users/filip/esp/esp-idf/components/newlib/Kconfig;C:/Users/filip/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/filip/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/filip/esp/esp-idf/components/esp_rom/Kconfig.projbuild;C:/Users/filip/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/filip/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32c3", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "riscv", "soc", "spi_flash", "" ],
-    "build_component_paths" : [ "C:/Users/wesqu/esp/esp-idf/components/bootloader", "C:/Users/wesqu/esp/esp-idf/components/bootloader_support", "C:/Users/wesqu/esp/esp-idf/components/efuse", "C:/Users/wesqu/esp/esp-idf/components/esp32c3", "C:/Users/wesqu/esp/esp-idf/components/esp_common", "C:/Users/wesqu/esp/esp-idf/components/esp_hw_support", "C:/Users/wesqu/esp/esp-idf/components/esp_rom", "C:/Users/wesqu/esp/esp-idf/components/esp_system", "C:/Users/wesqu/esp/esp-idf/components/esptool_py", "C:/Users/wesqu/esp/esp-idf/components/freertos", "C:/Users/wesqu/esp/esp-idf/components/hal", "C:/Users/wesqu/esp/esp-idf/components/log", "C:/Users/wesqu/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/wesqu/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/wesqu/esp/esp-idf/components/newlib", "C:/Users/wesqu/esp/esp-idf/components/partition_table", "C:/Users/wesqu/esp/esp-idf/components/riscv", "C:/Users/wesqu/esp/esp-idf/components/soc", "C:/Users/wesqu/esp/esp-idf/components/spi_flash", "" ]
+    "build_component_paths" : [ "C:/Users/filip/esp/esp-idf/components/bootloader", "C:/Users/filip/esp/esp-idf/components/bootloader_support", "C:/Users/filip/esp/esp-idf/components/efuse", "C:/Users/filip/esp/esp-idf/components/esp32c3", "C:/Users/filip/esp/esp-idf/components/esp_common", "C:/Users/filip/esp/esp-idf/components/esp_hw_support", "C:/Users/filip/esp/esp-idf/components/esp_rom", "C:/Users/filip/esp/esp-idf/components/esp_system", "C:/Users/filip/esp/esp-idf/components/esptool_py", "C:/Users/filip/esp/esp-idf/components/freertos", "C:/Users/filip/esp/esp-idf/components/hal", "C:/Users/filip/esp/esp-idf/components/log", "C:/Users/filip/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/filip/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/filip/esp/esp-idf/components/newlib", "C:/Users/filip/esp/esp-idf/components/partition_table", "C:/Users/filip/esp/esp-idf/components/riscv", "C:/Users/filip/esp/esp-idf/components/soc", "C:/Users/filip/esp/esp-idf/components/spi_flash", "" ]
 }

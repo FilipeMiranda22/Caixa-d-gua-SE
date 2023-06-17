@@ -1,4 +1,4 @@
-/* * Data converted from C:/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

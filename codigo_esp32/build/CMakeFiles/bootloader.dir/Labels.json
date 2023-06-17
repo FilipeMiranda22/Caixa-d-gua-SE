@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

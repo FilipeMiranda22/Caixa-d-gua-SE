@@ -4,16 +4,16 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/wesqu/esp/esp-idf/components/bootloader/subproject"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/tmp"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src"
-  "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/filip/esp/esp-idf/components/bootloader/subproject"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/tmp"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src"
+  "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()

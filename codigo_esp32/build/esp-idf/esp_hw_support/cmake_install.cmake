@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wesqu/esp/esp-idf/components/esp_hw_support
+# Install script for directory: C:/Users/filip/esp/esp-idf/components/esp_hw_support
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/wesqu/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/filip/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/esp_hw_support/port/esp32c3/cmake_install.cmake")
+  include("D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/esp_hw_support/port/esp32c3/cmake_install.cmake")
 
 endif()
 
