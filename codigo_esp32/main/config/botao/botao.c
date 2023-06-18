@@ -8,6 +8,7 @@
 #include "../led/led.h"
 #include "ssd1306.h"
 #include "../oled/oled.h"
+#include "../atuador/atuador.h"
 
 #define BUTTON_PIN GPIO_NUM_0
 
@@ -19,6 +20,7 @@ float full_distance = 0;
 int first_press = 1;
 int key_red = 0;
 int key_green = 0;
+int bomba_iniciada = 0;
 
 SSD1306_t dev;
 
@@ -105,13 +107,6 @@ int get_percent_distance() {
     float distancia_atual = get_distance();
     int porcentagem = 0;
 
-    if (distancia_atual < full_distance){
-        return 100;
-    }
-    if (distancia_atual > empty_distance){
-        return 0;
-    }
-
     for (int i = 0; i < 20; i++) {
         float valor_minimo_i = full_distance + i * tamanho_parte;
         float valor_maximo_i = full_distance + (i + 1) * tamanho_parte;
@@ -124,7 +119,27 @@ int get_percent_distance() {
 
     vTaskDelay(pdMS_TO_TICKS(500));
     porcentagem = (porcentagem < 0) ? -porcentagem : porcentagem;
+
+    if ((distancia_atual < full_distance) || porcentagem >= 100){
+        if(bomba_iniciada == 1){
+            desativar_bomba();
+            bomba_iniciada = 0;    
+        }
+        return 100;
+    }
+    else if ((distancia_atual > empty_distance) || porcentagem <= 10){
+        if(bomba_iniciada == 0){
+            ativar_bomba();
+            bomba_iniciada = 1;    
+        }
+        return 10;
+    }
+
     return porcentagem;
+}
+
+void get_calibrate(){
+    return full_distance != 0;
 }
 
 

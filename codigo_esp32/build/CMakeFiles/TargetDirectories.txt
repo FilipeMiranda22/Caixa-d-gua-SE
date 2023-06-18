@@ -408,6 +408,7 @@ D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/asio/CMakeFile
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/asio/CMakeFiles/install.dir
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/asio/CMakeFiles/install/local.dir
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/asio/CMakeFiles/install/strip.dir
+D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/bt/CMakeFiles/__idf_bt.dir
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/bt/CMakeFiles/edit_cache.dir
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/bt/CMakeFiles/rebuild_cache.dir
 D:/Documentos/ESP-32/SE/Caixa-d-gua-SE/codigo_esp32/build/esp-idf/bt/CMakeFiles/list_install_components.dir

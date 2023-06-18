@@ -10,6 +10,9 @@
         "distancia.h": "c",
         "ssd1306.h": "c",
         "font8x8_basic.h": "c",
-        "led.h": "c"
-    }
+        "led.h": "c",
+        "botao.h": "c",
+        "atuador.h": "c"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/TCC/digital-price/components/ssd1306"
 }
