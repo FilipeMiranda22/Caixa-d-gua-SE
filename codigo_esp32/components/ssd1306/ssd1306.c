@@ -87,6 +87,30 @@ void ssd1306_display_image(SSD1306_t * dev, int page, int seg, uint8_t * images,
 	memcpy(&dev->_page[page]._segs[seg], images, width);
 }
 
+void ssd1306_display_text_centered(SSD1306_t * dev, int page, char * text, int text_len, bool invert)
+{
+	if (page >= dev->_pages) return;
+	int _text_len = text_len;
+	if (_text_len > 16) _text_len = 16;
+
+	uint8_t seg = 0;
+	uint8_t image[8];
+	// calcular a largura total do texto
+	int total_width = _text_len * 8;
+
+	// calcular a posição x inicial para centralizar o texto
+	int start_x = (dev->_width - total_width) / 2;
+
+	for (uint8_t i = 0; i < _text_len; i++) {
+		memcpy(image, font8x8_basic_tr[(uint8_t)text[i]], 8);
+		if (invert) ssd1306_invert(image, 8);
+		if (dev->_flip) ssd1306_flip(image, 8);
+		// usar a posição x calculada para centralizar o texto
+		ssd1306_display_image(dev, page, start_x + seg, image, 8);
+		seg = seg + 8;
+	}
+}
+
 void ssd1306_display_text(SSD1306_t * dev, int page, char * text, int text_len, bool invert)
 {
 	if (page >= dev->_pages) return;

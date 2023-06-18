@@ -1,9 +1,15 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "idf.flashType": "UART",
-    "idf.portWin": "COM12",
+    "idf.portWin": "COM11",
     "idf.adapterTargetName": "esp32c3",
     "idf.openOcdConfigs": [
         "board/esp32c3-builtin.cfg"
-    ]
+    ],
+    "files.associations": {
+        "distancia.h": "c",
+        "ssd1306.h": "c",
+        "font8x8_basic.h": "c",
+        "led.h": "c"
+    }
 }

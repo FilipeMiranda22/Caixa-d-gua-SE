@@ -8,6 +8,7 @@
 #include "font8x8_basic.h"
 #include "config/botao/botao.h"
 #include "config/distancia/distancia.h"
+#include "config/led/led.h"
 
 SSD1306_t dev;
 
@@ -15,12 +16,10 @@ static const char* TAG = "ESP32";
 
 void app_main(void)
 {
-    
+    init_led();
     init_oled(); 
-    xTaskCreate(button_task, "button_task", 4096, NULL, 6, NULL);
+    xTaskCreate(button_task, "button_task", 4096, NULL, 1, NULL);
     //xTaskCreate(init_temperatura, "temperature_task", 2048, NULL, 5, NULL);
     ESP_LOGI(TAG, "Inicializando sensor de distância HC-SR04");
-    xTaskCreate(distance_measurement_task, "distance_task", 4096, NULL, 5, NULL);
-    //ssd1306_display_text(&dev, 0, "Temperatura:", 12, false);
-    //ssd1306_display_text(&dev, 2, "Nivel:", 12, false);
+    xTaskCreate(distance_measurement_task, "distance_task", 4096, NULL, 2, NULL);
 }
