@@ -14,5 +14,5 @@
         "botao.h": "c",
         "atuador.h": "c"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/TCC/digital-price/components/ssd1306"
+    "cmake.sourceDirectory": "${workspaceFolder}/caixa-agua"
 }

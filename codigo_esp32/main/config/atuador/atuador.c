@@ -27,11 +27,7 @@ void desativar_resistencia(){
 }
 
 int isResistenciaAtivada(){
-    if (gpio_get_level(RESISTENCIA_GPIO) == 0){
-        return 0;
-    }else {
-        return 1;
-    }
+    return gpio_get_level(RESISTENCIA_GPIO);
 }
 
 int isBombaAtivada(){

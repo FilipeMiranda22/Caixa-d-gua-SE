@@ -16,8 +16,9 @@
 #include "services/gatt/ble_svc_gatt.h"
 #include "sdkconfig.h"
 
-#define MAX_SSID_LENGTH 32
-#define MAX_PASSWORD_LENGTH 64
+#include "../temperatura/temperatura.h"
+
+#define MAX_TEMP_LENGTH 32
 
 char *TAG = "BLE-Server";
 uint8_t ble_addr_type;
@@ -26,8 +27,7 @@ char text;
 uint8_t mac[6];
 char mac_str[19];
 
-static char ssid_bluetooth_wifi[MAX_SSID_LENGTH];     // Variável global para armazenar o ssid_bluetooth_wifi
-static char password_bluetooth_wifi[MAX_PASSWORD_LENGTH]; // Variável global para armazenar a senha
+static char user_bluetooth_temp[MAX_TEMP_LENGTH];     // Variável global para armazenar o user_bluetooth_temp
 
 void disconnect_bluetooth() {
     esp_nimble_hci_and_controller_deinit();
@@ -42,69 +42,35 @@ char* get_mac_bt(){
     return mac_str;
 }
 
-char* get_ssid(){
-    return ssid_bluetooth_wifi;
+char* get_bluetooth_temp(){
+    return user_bluetooth_temp;
 }
 
-char* get_password(){
-    return password_bluetooth_wifi;
-}
-
-void set_ssid(const char* ssid) {
-    strncpy(ssid_bluetooth_wifi, ssid, MAX_SSID_LENGTH - 1);
-    ssid_bluetooth_wifi[MAX_SSID_LENGTH - 1] = '\0';
-}
-
-void set_password(const char* password) {
-    strncpy(password_bluetooth_wifi, password, MAX_PASSWORD_LENGTH - 1);
-    password_bluetooth_wifi[MAX_PASSWORD_LENGTH - 1] = '\0';
-}
-
-int ready_to_send_wifi_data(){
-    if((strlen(ssid_bluetooth_wifi) > 0) && (strlen(password_bluetooth_wifi) > 0)){
-        return 1;
-    }
-    return 0;
-}
-
-void init_wifi_credentials(void) {
-    memset(ssid_bluetooth_wifi, '\0', sizeof(ssid_bluetooth_wifi));
-    memset(password_bluetooth_wifi, '\0', sizeof(password_bluetooth_wifi));
+void set_bluetooth_temp(const char* temp) {
+    strncpy(user_bluetooth_temp, temp, MAX_TEMP_LENGTH - 1);
+    user_bluetooth_temp[MAX_TEMP_LENGTH - 1] = '\0';
 }
 
 // Write data to ESP32 defined as server
-static int ssid_bluetooth_wifi_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static int user_bluetooth_bluetooth_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    ESP_LOGI("TAG", "Ssid atualizado: %.*s", ctxt->om->om_len, ctxt->om->om_data);
+    ESP_LOGI("TAG", "User Temp Atualizado: %.*s", ctxt->om->om_len, ctxt->om->om_data);
     const char* data = (const char*) ctxt->om->om_data;
-    strncpy(ssid_bluetooth_wifi, data, ctxt->om->om_len);           // Copia o novo ssid_bluetooth_wifi para a variável global
-    ssid_bluetooth_wifi[ctxt->om->om_len] = '\0';
+    strncpy(user_bluetooth_temp, data, ctxt->om->om_len);           // Copia o novo user_bluetooth_temp para a variável global
+    user_bluetooth_temp[ctxt->om->om_len] = '\0';
+    float value = atof(user_bluetooth_temp);
+    set_temp_user(value);
     return 0;
 }
 
 // Read data from ESP32 defined as server
-static int ssid_bluetooth_wifi_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static int user_bluetooth_temp_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    ESP_LOGI("TAG", "ssid_bluetooth_wifi: %s", ssid_bluetooth_wifi);
-    os_mbuf_append(ctxt->om, ssid_bluetooth_wifi, strlen(ssid_bluetooth_wifi));
+    ESP_LOGI("TAG", "user_bluetooth_temp: %s", user_bluetooth_temp);
+    os_mbuf_append(ctxt->om, user_bluetooth_temp, strlen(user_bluetooth_temp));
     return 0;
 }
 
-static int password_bluetooth_wifi_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
-{
-    ESP_LOGI("TAG", "Password atualizado: %.*s", ctxt->om->om_len, ctxt->om->om_data);
-    const char* data = (const char*) ctxt->om->om_data;
-    strncpy(password_bluetooth_wifi, data, ctxt->om->om_len);           // Copia o novo password_bluetooth_wifi para a variável global
-    password_bluetooth_wifi[ctxt->om->om_len] = '\0';
-    return 0;
-}
-
-static int password_bluetooth_wifi_read(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
-{
-    ESP_LOGI("TAG", "password_bluetooth_wifi: %s", password_bluetooth_wifi);
-    os_mbuf_append(ctxt->om, password_bluetooth_wifi, strlen(password_bluetooth_wifi));
-    return 0;
-}
 
 // Array of pointers to other service definitions
 // UUID - Universal Unique Identifier
@@ -116,22 +82,12 @@ static const struct ble_gatt_svc_def gatt_svcs[] = {
         {
             .uuid = BLE_UUID16_DECLARE(0xF221),           // Define UUID for writing
             .flags = BLE_GATT_CHR_F_WRITE,
-            .access_cb = ssid_bluetooth_wifi_write
+            .access_cb = user_bluetooth_bluetooth_write
         },
         {
             .uuid = BLE_UUID16_DECLARE(0xA221),           // Define UUID for reading
             .flags = BLE_GATT_CHR_F_READ,
-            .access_cb = ssid_bluetooth_wifi_read
-        },
-        {
-            .uuid = BLE_UUID16_DECLARE(0xF942),           // Define UUID for writing
-            .flags = BLE_GATT_CHR_F_WRITE,
-            .access_cb = password_bluetooth_wifi_write
-        },
-        {
-            .uuid = BLE_UUID16_DECLARE(0xA942),           // Define UUID for reading
-            .flags = BLE_GATT_CHR_F_READ,
-            .access_cb = password_bluetooth_wifi_read
+            .access_cb = user_bluetooth_temp_read
         },
         {0}
         }
@@ -205,7 +161,7 @@ void bluetooth_start()
     nvs_flash_init();                          // 1 - Initialize NVS flash using
     esp_nimble_hci_and_controller_init();      // 2 - Initialize ESP controller
     nimble_port_init();                        // 3 - Initialize the host stack
-    ble_svc_gap_device_name_set(get_mac_bt()); // 4 - Initialize NimBLE configuration - server name
+    ble_svc_gap_device_name_set("TEMPERATURA"); // 4 - Initialize NimBLE configuration - server name
     ble_svc_gap_init();                        // 4 - Initialize NimBLE configuration - gap service
     ble_svc_gatt_init();                       // 4 - Initialize NimBLE configuration - gatt service
     ble_gatts_count_cfg(gatt_svcs);            // 4 - Initialize NimBLE configuration - config gatt services

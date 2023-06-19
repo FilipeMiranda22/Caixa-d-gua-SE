@@ -8,9 +8,11 @@
 #include "ssd1306.h"
 #include "esp_log.h"
 
-float userTemp = 30;
+float userTemp = 0;
 float temp = 0;
 #include "../atuador/atuador.h"
+
+#define DS18B20_GPIO 7
 
 SSD1306_t dev;
 
@@ -51,4 +53,21 @@ void init_temperatura(){
 
 float get_temp(){
     return temp;
+}
+
+void set_temp_user(float temperatura){
+    if(temperatura > 50){
+        userTemp = 50;
+    }
+    else if(temperatura < 10){
+        userTemp = 10;
+    }
+    else{
+        userTemp = temperatura;    
+    }
+    ESP_LOGI("TAG", "Temperatura %.2f\n", userTemp);
+}
+
+float get_user_temp(){
+    return userTemp;
 }

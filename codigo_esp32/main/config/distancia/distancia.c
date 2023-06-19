@@ -58,9 +58,12 @@ void distance_measurement_task() {
         if (gpio_get_level(ECHO_PIN) == 0) {
             // Calcular a distância em centímetros
             distance_cm = (echo_time - start_time) * 0.0343 / 2.0;
-            // sprintf(buffer, "%.2f cm", distance_cm);
-            // set_calibration_text(3, true, buffer);
-            ESP_LOGI(TAG, "Distância: %.2f cm", distance_cm);
+            if(get_calibration()) {
+                
+                sprintf(buffer, "%.2f cm", distance_cm);
+                set_calibration_text(4, true, buffer, true);
+                ESP_LOGI(TAG, "Distância: %.2f cm", distance_cm);
+            }
         }
 
         vTaskDelay(pdMS_TO_TICKS(1000)); // Aguardar 100 milissegundos antes de verificar novamente o botão e realizar medições

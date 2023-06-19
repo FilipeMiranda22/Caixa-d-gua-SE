@@ -10,8 +10,7 @@
 #include "config/distancia/distancia.h"
 #include "config/led/led.h"
 #include "config/atuador/atuador.h"
-
-SSD1306_t dev;
+#include "config/bluetooth/bluetooth.h"
 
 static const char* TAG = "ESP32";
 
@@ -20,6 +19,9 @@ void app_main(void)
     init_led();
     init_oled(); 
     init_atuador();
+    bluetooth_start();
+    set_calibration_text(2, 1, "CALIBRAGEM", true);
+    set_calibration_text(4, 1, "APERTE O BOTAO", true);
     xTaskCreate(button_task, "button_task", 4096, NULL, 1, NULL);
     xTaskCreate(init_temperatura, "temperature_task", 2048, NULL, 5, NULL);
     ESP_LOGI(TAG, "Inicializando sensor de distância HC-SR04");
